@@ -6,7 +6,9 @@
         {
             /*
              Uppgift 1:
-                Klasser: Employee
+                Klasser: 
+                    Employee: för employee metoder och attribut.
+                    Program: för core programmet och dess loop
              */
             /*
              Uppgift 2:
