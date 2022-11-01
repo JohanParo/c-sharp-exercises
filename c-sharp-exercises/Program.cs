@@ -10,10 +10,14 @@
              */
             /*
              Uppgift 2:
-                Attribut:
+                Attribut och metoder för Emplotee:
                     Namn, Lön
                 Metoder:
-                    GetName, GetPay, PrintRegistery
+                    GetName, GetPay
+                
+                Övriga metoder:
+                    PrintRegistry: skriver ut registret
+                    InputPay: används för att se till att input är ett nummer
              */
 
             //Uppgift 3:
@@ -36,10 +40,11 @@
                     Console.Write("Skriv in personens namn: ");
                     string name = Console.ReadLine();
 
-                    Console.Write("Skriv in personens lön: ");
-                    int pay = Int32.Parse(Console.ReadLine());
+                    int pay = InputPay();
+
 
                     employees.AddLast(new Employee(name, pay));
+
                 }
                 else if (input == "2")
                 {
@@ -61,6 +66,23 @@
                 Console.WriteLine(msg);
             }
             Console.WriteLine();
+        }
+
+        private static int InputPay()
+        {
+            int pay = 0;
+            Console.Write("Skriv in personens lön: ");
+            try 
+            {
+                pay = Int32.Parse(Console.ReadLine());
+            
+            }
+            catch (System.FormatException)
+            {
+                Console.WriteLine("Lön måste vara ett nummer.");
+                pay = InputPay();
+            }
+            return pay;
         }
 
     }
