@@ -27,6 +27,7 @@
             int end = 1;
             LinkedList<Employee> employees = new LinkedList<Employee>();
 
+            //two preadded employees
             employees.AddLast(new Employee("Johan Parö", 150));
             employees.AddLast(new Employee("Erik Parö", 140));
 
