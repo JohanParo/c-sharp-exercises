@@ -65,7 +65,7 @@
             Console.WriteLine("Register över anställda");
             foreach (Employee employee in list)
             {
-                string msg = "Namn: " + employee.GetName() + ", Lön: " + employee.GetPay() + "kr.";
+                string msg = "Namn: " + employee.Name + ", Lön: " + employee.Pay + "kr.";
                 Console.WriteLine(msg);
             }
             Console.WriteLine();

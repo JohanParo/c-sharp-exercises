@@ -8,23 +8,24 @@ namespace c_sharp_exercises
 {
     internal class Employee
     {
-        public string Name { get; set; }
-        public int Pay { get; set; }
+        private string name { get; set; }
+        private int pay { get; set; }
 
         public Employee(string name, int pay)
         {
-            this.Name = name;
-            this.Pay = pay;
+            this.name = name;
+            this.pay = pay;
+        }
+        public string Name 
+        {
+            get { return name; }
+            set { name = value;  } 
+        }
+        public int Pay 
+        {
+            get { return pay; }
+            set { pay = value; }
         }
 
-        public string GetName()
-        {
-            return this.Name;
-        }
-
-        public int GetPay()
-        {
-            return this.Pay;
-        }
     }
 }
