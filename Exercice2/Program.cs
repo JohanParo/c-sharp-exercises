@@ -14,7 +14,7 @@
                 Console.WriteLine("----------------------------------------------------------------------");
                 Console.WriteLine("| För att komma till Biljettpriser tryck 1.                          |");
                 Console.WriteLine("| För att räkna ut biljettpris för flera personer tillsammans tryck 2|");
-                Console.WriteLine("| do to third thing type 3                                           |");
+                Console.WriteLine("| För att upprepa en inskriven text 10 gånger tryck 3                |");
                 Console.WriteLine("| to do fourth thing type 4, to quit type 0.                         |");
                 Console.WriteLine("----------------------------------------------------------------------");
                 string input = Console.ReadLine();
@@ -62,6 +62,21 @@
                         }
                     case "3":
                         {
+
+                            Console.WriteLine("Skriv in en godtycklig text");
+                            string text = Console.ReadLine();
+
+                            for (int i = 0; i < 10; i++)
+                            {
+                                if (i == 9)
+                                {
+                                    Console.WriteLine($"{i + 1}. {text}.");
+                                }
+                                else
+                                {
+                                    Console.Write($"{i+1}. {text}, ");
+                                }
+                            }
                             break;
                         }
                     case "4":
