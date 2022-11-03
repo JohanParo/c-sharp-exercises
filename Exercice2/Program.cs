@@ -11,13 +11,13 @@
             Console.WriteLine("Welcome to the main menu!");
             do
             {
-                Console.WriteLine(" --------------------------------------------------------------------");
-                Console.WriteLine("| För att komma till Biljettpriser tryck 1.                          |");
-                Console.WriteLine("| För att räkna ut biljettpris för flera personer tillsammans tryck 2|");
-                Console.WriteLine("| För att upprepa en inskriven text 10 gånger tryck 3                |");
-                Console.WriteLine("| För att få tillbaka det tredje ordet i en inskriven mening tryck 4 |");
-                Console.WriteLine("| För att avsluta programmet tryck 0.                                |");
-                Console.WriteLine(" --------------------------------------------------------------------");
+                Console.WriteLine(" ---------------------------------------------------------------------");
+                Console.WriteLine("| För att komma till Biljettpriser tryck 1.                           |");
+                Console.WriteLine("| För att räkna ut biljettpris för flera personer tillsammans tryck 2 |");
+                Console.WriteLine("| För att upprepa en inskriven text 10 gånger tryck 3                 |");
+                Console.WriteLine("| För att få tillbaka det tredje ordet i en inskriven mening tryck 4  |");
+                Console.WriteLine("| För att avsluta programmet tryck 0.                                 |");
+                Console.WriteLine(" ---------------------------------------------------------------------");
                 string input = Console.ReadLine();
 
                 switch (input)
