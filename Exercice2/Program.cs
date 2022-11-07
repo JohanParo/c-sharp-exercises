@@ -1,4 +1,6 @@
-﻿namespace Exercics2
+﻿using Exercise2;
+
+namespace Exercics2
 {
     internal class Program
     {
@@ -31,18 +33,9 @@
                         {
                             Console.WriteLine("Ange din ålder:");
                             int age = Int32.Parse(Console.ReadLine());
-                            if (age < 20)
-                            {
-                                Console.WriteLine("Undomspris: 80kr");
-                            }
-                            else if (age > 64)
-                            {
-                                Console.WriteLine("Pensionärspris: 90kr");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Standardpris: 120kr");
-                            }
+
+                            Console.WriteLine($"{Helper.GetTicketName(age)}: {Helper.GetTicketPrice(age)}kr");
+                            
                             break;
                         }
                     case "2": //check price of many different people and return total price
@@ -54,7 +47,7 @@
                             {
                                 Console.WriteLine($"Hur gammal är person{i + 1}");
                                 int age = Int32.Parse(Console.ReadLine());
-                                totalprice += GetTicketPrice(age);
+                                totalprice += Helper.GetTicketPrice(age);
                             }
                             Console.WriteLine($"Ni är totalt {customers} många personer");
                             Console.WriteLine($"Den totala kostnaden för er är {totalprice}kr");
@@ -104,22 +97,7 @@
             } while (keepGoing);
         }
 
-        //Get the price of the ticket based on input age
-        private static int GetTicketPrice(int age)
-        {
-            if (age < 20)
-            {
-                return 80;
-            }
-            else if (age > 64)
-            {
-                return 90;
-            }
-            else
-            {
-                return 120;
-            }
-        }
+
 
     }
 }
