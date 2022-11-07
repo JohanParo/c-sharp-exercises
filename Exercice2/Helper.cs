@@ -11,7 +11,11 @@ namespace Exercise2
         //Get the price of the ticket based on input age
         public static int GetTicketPrice(int age)
         {
-            if (age < 20)
+            if (age < 5 || age > 100)
+            {
+                return 0;
+            }
+            else if (age < 20)
             {
                 return 80;
             }
@@ -28,7 +32,11 @@ namespace Exercise2
         //Get the name of the ticket based on input age
         public static string GetTicketName(int age)
         {
-            if (age < 20)
+            if (age < 5 || age > 100)
+            {
+                return "Gratis";
+            }
+            else if (age < 20)
             {
                 return "Undomspris";
             }
@@ -36,6 +44,7 @@ namespace Exercise2
             {
                 return "Pensionärspris";
             }
+            
             else
             {
                 return "Standardpris";
