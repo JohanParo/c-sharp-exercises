@@ -4,8 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Person person = new Person("johan", "paro");
+            PersonHandler personHandler = new PersonHandler();
 
+            Person person1 = personHandler.CreatePerson(28, "Johan", "Paro", 194, 130);
+
+
+            Console.WriteLine(person1.ToString());
 
         }
     }

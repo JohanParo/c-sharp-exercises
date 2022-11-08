@@ -27,16 +27,23 @@ namespace Exercise3
         public string FirstName
         {
             get { return firstName; }
-            set { 
-                if (firstName.Length < 2 || firstName.Length > 10) { throw new ArgumentException("Not a valid input","firstName"); }
-                firstName = value; }
+            set
+            {
+                if (value.Length < 2 || value.Length > 10)
+                {
+                    throw new ArgumentException("Not a valid input", "firstName");
+                }
+                else { firstName = value; }
+            }
         }
         public string LastName
         {
             get { return lastName; }
             set {
-                if (lastName.Length < 2 || lastName.Length > 10) { throw new ArgumentException("Not a valid input", "lastName"); }
-                lastName = value; }
+                if (value.Length < 2 || value.Length > 10) { throw new ArgumentException("Not a valid input", "lastName"); }
+                else { lastName = value; }
+            }
+                
         }
         public double Height
         {
@@ -53,6 +60,11 @@ namespace Exercise3
         {
             FirstName = firstName;
             LastName = lastName;
+        }
+
+        public override string ToString()
+        {
+            return $"Name:{firstName} {lastName}, Age:{age}, Height:{height}cm, Weight:{weight}kg.";
         }
 
 
