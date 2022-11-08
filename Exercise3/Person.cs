@@ -12,8 +12,8 @@ namespace Exercise3
         private int age;
         private string firstName;
         private string lastName;
-        private int height;
-        private int weight;
+        private double height;
+        private double weight;
 
         public int Age
         {
@@ -38,12 +38,12 @@ namespace Exercise3
                 if (lastName.Length < 2 || lastName.Length > 10) { throw new ArgumentException("Not a valid input", "lastName"); }
                 lastName = value; }
         }
-        public int Height
+        public double Height
         {
             get { return height; }
             set { height = value; }
         }
-        public int Weight
+        public double Weight
         {
             get { return weight; }
             set { weight = value; }
