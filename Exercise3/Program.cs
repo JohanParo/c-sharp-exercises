@@ -13,6 +13,7 @@
 
             userErrors.Add(new TextInputError());
             userErrors.Add(new NumericInputError());
+            userErrors.Add(new NullInputError());
 
             foreach (UserError error in userErrors)
             {

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exercise3
 {
-    internal class TextInputError : UserError
+    internal class NullInputError : UserError
     {
         public override string UEMessage()
         {
-            return "You tried to use a text input in a numeric only field. This fired an error!";
+            return "You tried to use a null input in a field. This fired an error!";
         }
     }
 }
