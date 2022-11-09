@@ -19,5 +19,10 @@ namespace Exercise3
             Name = name;
             Age = age;
         }
+
+        public virtual string Stats()
+        {
+            return $"Name: {Name}, Age: {Age}, Weight: {Weight}";
+        }
     }
 }

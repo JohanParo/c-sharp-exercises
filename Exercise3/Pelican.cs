@@ -14,5 +14,10 @@ namespace Exercise3
             base.Name = name;
             base.Age = age;
         }
+
+        public override string Stats()
+        {
+            return base.Stats() + $", has caught {numberOfFishesCaught} fishes";
+        }
     }
 }

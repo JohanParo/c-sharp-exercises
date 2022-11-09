@@ -14,5 +14,9 @@ namespace Exercise3
             base.Age = age;
             base.Name = name;
         }
+        public override string Stats()
+        {
+            return base.Stats() + $", has {numberOfFeathers} feathers";
+        }
     }
 }
