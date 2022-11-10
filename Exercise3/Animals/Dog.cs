@@ -24,5 +24,10 @@ namespace Exercise3.Animals
         {
             return base.Stats() + $", is it shedding: {isShedding}";
         }
+
+        public string isAGoodBoy()
+        {
+            return $"Yes {Name} is a good boy!";
+        }
     }
 }
