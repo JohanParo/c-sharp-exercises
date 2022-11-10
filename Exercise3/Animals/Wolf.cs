@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise3
+namespace Exercise3.Animals
 {
     public class Wolf : Animal
     {
@@ -16,8 +16,8 @@ namespace Exercise3
 
         public Wolf(string name, int age) : base(name, age)
         {
-            base.Age = age;
-            base.Name = name;
+            Age = age;
+            Name = name;
         }
 
         public override string Stats()

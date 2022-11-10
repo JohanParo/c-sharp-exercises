@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise3
+namespace Exercise3.Animals
 {
     internal class Swan : Bird
     {
         public bool isAngry { get; set; }
         public Swan(string name, int age) : base(name, age)
         {
-            base.Name = name;
-            base.Age = age;
+            Name = name;
+            Age = age;
         }
         public override string Stats()
         {

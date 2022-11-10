@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise3
+namespace Exercise3.Animals
 {
     internal class Wolfman : Wolf, IPerson
     {
         public Wolfman(string name, int age) : base(name, age)
         {
-            base.Age = age;
-            base.Name = name;
+            Age = age;
+            Name = name;
         }
 
         public void Talk()
