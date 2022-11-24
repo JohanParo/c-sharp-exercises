@@ -12,20 +12,30 @@ namespace Exercise5
     {
         public Vehicle[] Storage { get; set; }
         private int StoredVehicles { get; set; }
+        private int capacity;
 
         public Garage(int size)
         {
             Storage = new Vehicle[size];
-            StoredVehicles = 0;  
+            StoredVehicles = 0;
+            capacity = size;
         }
 
-        private void addVehicle(Vehicle vehicle)
+        public bool Add(Vehicle vehicle)
         {
-            Storage[StoredVehicles] = vehicle;
-            StoredVehicles++;
+            if (StoredVehicles == capacity)
+            {
+                return false;
+            }
+            else
+            {
+                Storage[StoredVehicles] = vehicle;
+                StoredVehicles++;
+                return true;
+            }
         }
 
-        private Vehicle RemoveVehicle(int spot)
+        private Vehicle Remove(int spot)
         {
             var tmp = Storage[spot];
             return tmp;
