@@ -23,21 +23,22 @@ namespace Exercise5
             return false;
         }
 
-        public Vehicle RemoveVehicle(int position)
-        {
-            return null;
-        }
-
         public Vehicle RemoveVehicle(string regnr)
         {
-            throw new NotImplementedException();
-        }
+            int position = garage.getPosition(regnr);
+            if (position == -1)
+            {
+                return null;
+            }
+            return garage.Remove(position);        }
 
-        internal void CreateGarage(string? garageSize)
+        internal void PrintAllVehicles()
         {
-            throw new NotImplementedException();
+            foreach (Vehicle vehicle in garage)
+            {
+                if (vehicle != null)
+                Console.WriteLine($"Vehicle with registry number: {vehicle.RegNr}");
+            }
         }
-
-
     }
 }

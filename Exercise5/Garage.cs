@@ -35,20 +35,34 @@ namespace Exercise5
             }
         }
 
-        private Vehicle Remove(int spot)
+        public Vehicle Remove(int spot)
         {
             var tmp = Storage[spot];
+            Storage[spot] = null;
             return tmp;
+        }
+
+        public int getPosition(string regnr)
+        {
+            for (int i = 0; i < capacity; i++)
+            {
+                if (Storage[i].RegNr == regnr)
+                    return i;
+            }
+            return -1;
         }
 
         public IEnumerator<Vehicle> GetEnumerator()
         {
-            throw new NotImplementedException();
+            foreach (Vehicle v in Storage)
+            {
+                yield return v;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            throw new NotImplementedException();
+            return GetEnumerator();
         }
 
         public Vehicle showVehicle(int pos)

@@ -9,13 +9,14 @@ namespace Exercise5
 {
     internal class Manager
     {
+        GarageHandler handler;
         public void Run()
         {
 
             var keepRunning = true;
             Console.WriteLine("How big is your garage?");
             int garageSize = Int32.Parse(Console.ReadLine());
-            var handler = new GarageHandler(garageSize);
+            handler = new GarageHandler(garageSize);
 
 
             do
@@ -28,14 +29,29 @@ namespace Exercise5
                     case "1":
                         Console.WriteLine("What's your vehicles registry number?");
                         var regnr = Console.ReadLine();
-                        bool added = handler.AddVehicle(regnr);
+                        bool added = handler.AddVehicle(CreateCar(regnr));
                         if (added) { Console.WriteLine("Your vehicle has been parked"); }
                         else { Console.WriteLine("Garage is full, you cannot park your vehicle here."); }
                         break;
                     case "2":
-                        Console.WriteLine("Please provide  registry number for your vehicle");
-                        var regnr = Console.ReadLine();
+                        Console.WriteLine("Please provide registry number for your vehicle");
+                        var regnr2 = Console.ReadLine();
+                        var vehicle = RemoveVehicle(regnr2);
+                        if (vehicle != null) 
+                        {
+                            Console.WriteLine($"your car with registry number {vehicle.RegNr} has been removed from the garage.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Could not find a vehicle with that registry number.");
+                        }
                         break;
+                    case "3":
+                        Console.WriteLine("Showing all vehicles stored in the garage:");
+                        handler.PrintAllVehicles();
+                        break;
+                    case "0":
+                        return;
                     default:
                         break;
                 }
@@ -46,9 +62,15 @@ namespace Exercise5
         {
 
         }
-        public Vehicle RemoveVehicle()
+
+        public Vehicle RemoveVehicle(string regnr)
         {
-            return null;
+            Vehicle vehicle = handler.RemoveVehicle(regnr);
+            if (vehicle == null)
+            {
+                return null;
+            }
+            return vehicle;
         }
 
         public void PrintMenu()
@@ -57,13 +79,13 @@ namespace Exercise5
             Console.WriteLine("option 1 add vehicle");
             Console.WriteLine("option 2 remove vehicle");
             Console.WriteLine("option 3 list all vehicles");
+            Console.WriteLine("enter 0 to exit the program");
         }
 
-        public void CreateCar(string regnr, int wheels, string color)
+        public Car CreateCar(string regnr)
         {
             var car = new Car(regnr);
-            car.NumberOfWheels = wheels;
-            car.Color = color;
+            return car;
         }
     }
 }
