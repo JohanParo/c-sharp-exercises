@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Exercise5.Vehicles
 {
-    internal class Motorcycle
+    internal class Motorcycle : Vehicle
     {
+        public Motorcycle(string regNr) : base(regNr)
+        {
+        }
     }
 }

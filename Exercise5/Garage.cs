@@ -8,7 +8,7 @@ using Exercise5.Vehicles;
 
 namespace Exercise5
 {
-    internal class Garage<T> : IEnumerable<Vehicle>
+    internal class Garage<T> : IEnumerable<Vehicle>, IGarage
     {
         public Vehicle[] Storage { get; set; }
         private int StoredVehicles { get; set; }

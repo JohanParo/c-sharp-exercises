@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise5
+namespace Exercise5.Vehicles
 {
-    internal class UI : IUI 
+    internal interface IVehicle
     {
     }
 }

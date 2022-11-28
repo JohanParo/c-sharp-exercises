@@ -8,7 +8,6 @@ namespace Exercise5.Vehicles
 {
     internal class Car : Vehicle
     {
-
         public Car(string regnr) : base(regnr)
         {
         }

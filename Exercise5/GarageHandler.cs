@@ -8,7 +8,7 @@ using Exercise5.Vehicles;
 namespace Exercise5
 
 {
-    internal class GarageHandler
+    internal class GarageHandler : IGarageHandler
     {
         private Garage<Vehicle> garage;
         public GarageHandler(int size)

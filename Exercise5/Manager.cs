@@ -14,6 +14,7 @@ namespace Exercise5
         {
 
             var keepRunning = true;
+            var ui = new UI();
             Console.WriteLine("How big is your garage?");
             int garageSize = Int32.Parse(Console.ReadLine());
             handler = new GarageHandler(garageSize);

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercise5
 {
-    internal class UI : IUI 
+    internal interface IUI
     {
+
+        public void PrintMenu();
     }
 }
