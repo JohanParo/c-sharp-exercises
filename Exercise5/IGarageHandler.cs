@@ -9,8 +9,8 @@ namespace Exercise5
 {
     internal interface IGarageHandler
     {
-        public bool AddVehicle();
-        public Vehicle RemoveVehicle();
+        public bool AddVehicle(Vehicle vehicle);
+        public Vehicle RemoveVehicle(string regnr);
         public void PrintAllVehicles();
     }
 }

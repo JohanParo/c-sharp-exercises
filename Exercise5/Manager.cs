@@ -22,33 +22,33 @@ namespace Exercise5
 
             do
             {
-                PrintMenu();
+                ui.PrintMenu();
                 var input = Console.ReadLine();
 
                 switch (input)
                 {
                     case "1":
-                        Console.WriteLine("What's your vehicles registry number?");
+                        ui.PrintString("What's your vehicles registry number?");
                         var regnr = Console.ReadLine();
                         bool added = handler.AddVehicle(CreateCar(regnr));
-                        if (added) { Console.WriteLine("Your vehicle has been parked"); }
-                        else { Console.WriteLine("Garage is full, you cannot park your vehicle here."); }
+                        if (added) { ui.PrintString("Your vehicle has been parked"); }
+                        else { ui.PrintString("Garage is full, you cannot park your vehicle here."); }
                         break;
                     case "2":
-                        Console.WriteLine("Please provide registry number for your vehicle");
+                        ui.PrintString("Please provide registry number for your vehicle");
                         var regnr2 = Console.ReadLine();
                         var vehicle = RemoveVehicle(regnr2);
                         if (vehicle != null) 
                         {
-                            Console.WriteLine($"your car with registry number {vehicle.RegNr} has been removed from the garage.");
+                            ui.PrintString($"your car with registry number {vehicle.RegNr} has been removed from the garage.");
                         }
                         else
                         {
-                            Console.WriteLine("Could not find a vehicle with that registry number.");
+                            ui.PrintString("Could not find a vehicle with that registry number.");
                         }
                         break;
                     case "3":
-                        Console.WriteLine("Showing all vehicles stored in the garage:");
+                        ui.PrintString("Showing all vehicles stored in the garage:");
                         handler.PrintAllVehicles();
                         break;
                     case "0":
@@ -58,11 +58,7 @@ namespace Exercise5
                 }
             } while (keepRunning);
         }
-
-        public void AddVehicle()
-        {
-
-        }
+        
 
         public Vehicle RemoveVehicle(string regnr)
         {
@@ -74,14 +70,7 @@ namespace Exercise5
             return vehicle;
         }
 
-        public void PrintMenu()
-        {
-            Console.WriteLine("Menu with options goes here");
-            Console.WriteLine("option 1 add vehicle");
-            Console.WriteLine("option 2 remove vehicle");
-            Console.WriteLine("option 3 list all vehicles");
-            Console.WriteLine("enter 0 to exit the program");
-        }
+        
 
         public Car CreateCar(string regnr)
         {
