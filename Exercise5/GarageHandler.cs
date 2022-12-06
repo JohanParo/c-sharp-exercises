@@ -16,7 +16,7 @@ namespace Exercise5
             garage = new Garage<Vehicle>(size);
         }
 
-        internal bool AddVehicle(Vehicle vehicle)
+        public bool AddVehicle(Vehicle vehicle)
         {
             var added = garage.Add(vehicle);
             if (added) { return true; }
@@ -32,11 +32,20 @@ namespace Exercise5
             }
             return garage.Remove(position);        }
 
-        internal void PrintAllVehicles()
+        public void PrintAllVehicles()
         {
             foreach (Vehicle vehicle in garage)
             {
                 if (vehicle != null)
+                Console.WriteLine($"Vehicle with registry number: {vehicle.RegNr}");
+            }
+        }
+
+        public void PrintFourWheeledVehicles()
+        {
+            var toPrint = garage.Where(x => x.NumberOfWheels == 4);
+            foreach (var vehicle in toPrint)
+            {
                 Console.WriteLine($"Vehicle with registry number: {vehicle.RegNr}");
             }
         }
