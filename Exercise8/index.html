@@ -4,28 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Coffee 4 You</title>
 </head>
 <body>
     <div class="container">
-        <header>Coffee4You</header>
-        <div class="row">
-            <div class="col-2"><a href="index.html">Home</a></div>
-            <div class="col-2"><a href="products.html">Products</a></div>
-            <div class="col-2"><a href="aboutUs.html">About us</a></div>
+        <header class="fw-bolder p-3">Coffee4You</header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="aboutUs.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row row-cols-2">
+            <div class="col">
+                <h4>Who are we?</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur sagittis sem rhoncus suscipit. Maecenas ut velit eget eros scelerisque eleifend hendrerit vel elit. Aenean blandit neque nulla, at tincidunt arcu convallis nec. Aliquam ex odio, facilisis id lobortis ut, pharetra ac mi. Nullam vel dui et sapien egestas dignissim et at leo. In eget egestas velit. Ut turpis neque, hendrerit at metus id, porttitor posuere augue.</p>
+            </div>
+            <div class="col">
+                <h4>What do we do?</h4>
+                <p>Nam consequat ultrices justo vel scelerisque. Nam interdum non magna ut bibendum. Sed eget neque quis tellus viverra ultricies at ac odio. Nulla facilisi. Etiam scelerisque ex a lectus condimentum pharetra nec a nisl. Etiam luctus massa eu elit tincidunt molestie. Phasellus at euismod velit. Ut vel aliquet nunc.</p>
+            </div>
+            <div class="col">
+                <h4>Why us?</h4>
+                <p>Pellentesque eu elit convallis, commodo elit vitae, dignissim est. In sed quam nec purus lacinia efficitur id eu justo. Nulla risus odio, ullamcorper nec dignissim vel, congue at quam. Donec imperdiet velit sed mauris luctus ultricies. Morbi at purus dui. Morbi eget rhoncus orci, in lobortis justo. In sagittis, sem id sollicitudin ullamcorper, nisi neque rhoncus erat, vel laoreet orci justo elementum libero.</p>
+            </div>
+            <div class="col">
+                <h4>Coffee Party, how it works!</h4>
+                <p>Duis pharetra venenatis elit nec hendrerit. Donec eu vehicula metus, sit amet maximus leo. Vestibulum dui nulla, tempor et nisl euismod, semper tempor magna. Morbi elementum diam efficitur leo malesuada, vel lacinia lacus gravida. Pellentesque ullamcorper eleifend orci in tristique. Donec porttitor est risus, non blandit magna mollis ut. Pellentesque mattis elit sed odio imperdiet molestie.</p>
+            </div>
         </div>
-        <!--<ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-        </ul> -->
-        <div>Who are we?</div>
-        <div>What do we do?</div>
-        <div>Why us?</div>
-        <div>Coffee Party, how it works!</div>
         <footer>copyright 2022 <br/>Johan Parö</footer>
     </div>
 </body>
