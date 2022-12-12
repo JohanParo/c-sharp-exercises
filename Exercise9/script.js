@@ -19,8 +19,6 @@ function checkIfBosh(input) {
     }
 };
 
-
-
 btn1.addEventListener('click', function(e){
     for (let i = 100; i > 0; i--) {
         
