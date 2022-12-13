@@ -7,7 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn1">Click to start count</button>
+    <form id="bishbosh-form">
+        <div class="form-row">
+            <label for="bish-number">Enter a number for Bish</label>
+            <input type="number" class="form-control" id="bish-number" placeholder="Enter a number">
+        </div>
+        <div class="form-row">
+            <label for="bosh-number">Enter a number for Bosh</label>
+            <input type="number" class="form-control" id="bosh-number" placeholder="Enter a number">
+        </div>
+        <div class="form-row">
+            <label for="count-number">Enter a number to count from</label>
+            <input type="number" class="form-control" id="count-number" placeholder="Enter a number">
+        </div>
+        <button id="form-submit" type="button" class="btn btn-primary">Start count</button>
+    </form>
+    <button id="btn1">Click to start default count in console</button>
     <script src="script.js"></script>
 </body>
 </html>
