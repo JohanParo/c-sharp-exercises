@@ -5,6 +5,7 @@ const form = document.querySelector('#bishbosh-form');
 const bishNumber = document.querySelector('#bish-number');
 const boshNumber = document.querySelector('#bosh-number');
 const totalCount = document.querySelector('#count-number');
+const results = document.querySelector('#results');
 
 function checkIfBish(input, bishnumber) {
     if ((input%bishnumber) === 0) {
@@ -45,22 +46,28 @@ btn1.addEventListener('click', function(e){
 });
 
 formBtn.addEventListener('click', function(e) {
-    console.log('yep');
-    //console.log(totalCount.value);
     for (let i = totalCount.value; i > 0; i--) {
         if (checkIfBish(i, bishNumber.value)) {
             if (checkIfBosh(i, boshNumber.value)) {
-                console.log('Bish-Bosh');
+                const tmp = document.createElement("p");
+                tmp.innerText = 'Bish-Bosh';
+                results.appendChild(tmp);
             }
             else {
-                console.log('Bish')
+                const tmp = document.createElement("p");
+                tmp.innerText = 'Bish';
+                results.appendChild(tmp);
             }
         }
         else if (checkIfBosh(i, boshNumber.value)) {
-            console.log('Bosh');
+            const tmp = document.createElement("p");
+            tmp.innerText = 'Bosh';
+            results.appendChild(tmp);
         }
         else {
-            console.log(i);
+            const tmp = document.createElement("p");
+            tmp.innerText = i;
+            results.appendChild(tmp);
         }
     }
 });
